@@ -93,14 +93,32 @@ body {
   animation: open-rev 2s;
 }
 
-.container:hover .lid {
+.container .lid {
   animation: open 0.5s;
+  animation-delay: 0.8s;
   animation-fill-mode: forwards;
 }
 
-.container:hover .card {
-  animation: slide 0.2s;
-  animation-delay: 0.5s;
+.container:hover .envelope{
+  animation: envelope 0.2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.container:hover .cover{
+  animation: envelope 0.2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.container:hover .lid{
+  animation: envelope 0.2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+.container:hover .shadow{
+  animation: envelope 0.2s;
+  animation-delay:1s;
   animation-fill-mode: forwards;
 }
 
@@ -147,10 +165,9 @@ body {
     transform: rotatex(180deg);
   }
 }
-@keyframes slide {
+@keyframes envelope {
   100% {
-    transform: translatey(-15vmin);
-    z-index: 2;
+    transform: translatey(30vmin);
   }
 }
 @keyframes open-rev {
