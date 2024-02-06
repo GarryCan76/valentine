@@ -16,6 +16,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .container {
@@ -41,7 +42,6 @@ body {
   align-items: center;
   left: 2.5vmin;
   top: 0vmin;
-  animation: slide-rev 0.2s ease-out;
 }
 
 .message {
@@ -90,37 +90,19 @@ body {
   border-right: 24vmin solid transparent;
   top: 0;
   transform-origin: top;
-  animation: open-rev 2s;
 }
-
 .container .lid {
-  animation: open 0.5s;
-  animation-delay: 0.8s;
-  animation-fill-mode: forwards;
+  animation: open 0.5s forwards;
 }
 
-.container:hover .envelope{
-  animation: envelope 0.2s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
+.container .envelope,
+.container .cover,
+.container .lid,
+.container .shadow {
+  animation: envelope 0.8s forwards;
+  animation-delay: 1s; /* Delay the start of the envelope animation */
 }
 
-.container:hover .cover{
-  animation: envelope 0.2s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-}
-
-.container:hover .lid{
-  animation: envelope 0.2s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
-}
-.container:hover .shadow{
-  animation: envelope 0.2s;
-  animation-delay:1s;
-  animation-fill-mode: forwards;
-}
 
 .shadow {
   position: relative;
@@ -165,18 +147,9 @@ body {
     transform: rotatex(180deg);
   }
 }
+
 @keyframes envelope {
   100% {
-    transform: translatey(30vmin);
+    transform: translatey(80vmin);
   }
 }
-@keyframes open-rev {
-  from {
-    transform: rotatex(-180deg);
-  }
-}
-@keyframes slide-rev {
-  from {
-    transform: translatey(-15vmin);
-  }
-}/*# sourceMappingURL=style.css.map */
