@@ -108,7 +108,7 @@ body {
   position: relative;
   width: 5vmin;
   height: 4vmin;
-  top: 7vmin;
+  top: 6vmin;
   left: -1vmin;
 }
 
@@ -130,4 +130,26 @@ body {
   left: 0;
   transform: rotate(45deg);
   transform-origin: 100% 100%;
+}
+
+.button {
+  border: none;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #f980a1;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: white;
+  transition: .2s;
+}
+
+#yes_btn {
+  margin-right: 5px;
+}
+
+#no_btn {
+  margin-right: 5px;
+
 }
