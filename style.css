@@ -57,7 +57,7 @@ body {
   border-left: 24vmin solid transparent;
   border-right: 24vmin solid transparent;
   top: 15vmin;
-  z-index: 3;
+  /* z-index: 3; */
 }
 
 .cover::after {
@@ -90,17 +90,7 @@ body {
   border-right: 24vmin solid transparent;
   top: 0;
   transform-origin: top;
-}
-.container .lid {
-  animation: open 0.5s forwards;
-}
-
-.container .envelope,
-.container .cover,
-.container .lid,
-.container .shadow {
-  animation: envelope 0.8s forwards;
-  animation-delay: 1s; /* Delay the start of the envelope animation */
+  z-index: -1;
 }
 
 
@@ -140,16 +130,4 @@ body {
   left: 0;
   transform: rotate(45deg);
   transform-origin: 100% 100%;
-}
-
-@keyframes open {
-  100% {
-    transform: rotatex(180deg);
-  }
-}
-
-@keyframes envelope {
-  100% {
-    transform: translatey(80vmin);
-  }
 }
